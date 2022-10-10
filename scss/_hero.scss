@@ -1,0 +1,78 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 6.063rem auto 5.625rem auto;
+  grid-template-areas:
+    ". . . . . . . . . . . . "
+    "front front front front front front front front front front front front"
+    ". . . . . . . . . . . ."
+    "group group group group group group group group group group group group";
+}
+
+.hero-front {
+  grid-area: front;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-size: 1864px 277px;
+  background-position-x: center;
+}
+
+.hero-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 5rem 0 0 0;
+    text-align: center;
+    font-size: 3.75rem;
+    font-weight: lighter;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: rubik;
+    line-height: 200%;
+    padding: 1.25rem;
+    color: #506270;
+    line-height: 2rem;
+  }
+}
+
+.front-btn {
+  margin-top: 0.937em;
+  font-size: 1rem;
+  font-family: avenir;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: rgb(25, 6, 6);
+  padding: 0;
+  width: 16.875em;
+  height: 3.125em;
+  color: #506270;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.front-btn:hover {
+  color: white;
+  background-color: #180c18;
+}
+
+.group-img {
+  grid-area: group;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}

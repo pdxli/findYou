@@ -1,0 +1,63 @@
+.newsletter {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.5rem auto 2px;
+  grid-template-areas:
+    ". . . . . . . . . . . . "
+    ". . newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterbutton newsletterbutton . ."
+    ". . hr hr hr hr hr hr hr hr . .";
+}
+
+.newsletterdesc {
+  grid-area: newsletterdesc;
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    padding-right: 7rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 2.5rem 0 3.125rem 0;
+    font-family: rubik;
+    line-height: 200%;
+    padding-right: 7rem;
+  }
+}
+
+.newsletterbutton {
+  grid-area: newsletterbutton;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  button {
+    width: 16.875rem;
+    height: 3.75rem;
+    border-radius: 3.125em;
+    border: none;
+    background-color: #80e0dd;
+    color: white;
+    font-size: 1.25rem;
+    font-family: rubik;
+    letter-spacing: 0.1875rem;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+
+  button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+}
+
+.newsletterhr {
+  grid-area: hr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

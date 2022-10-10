@@ -1,0 +1,136 @@
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.5rem auto 12.5rem auto;
+  grid-template-areas:
+    ". . . . . . . . . . . . "
+    ". . sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugimg1 sugimg1 sugimg1 sugimg1 . ."
+    ". . . . . . . . . . . . "
+    ". . sugimg2 sugimg2 sugimg2 sugimg2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 . .";
+}
+
+.sugdesc1,
+.sugdesc2,
+.sugimg1,
+.sugimg2 {
+  display: flex;
+}
+
+.sugdesc1 {
+  grid-area: sugdesc1;
+  flex-direction: column;
+}
+
+.sugimg1 {
+  grid-area: sugimg1;
+  justify-content: right;
+  align-items: center;
+}
+
+.sugdesc1 h3,
+.sugdesc2 h3 {
+  font: 2.5rem black;
+  font-family: avenir;
+  margin: 6.25rem 0 2.5rem 0;
+}
+
+.sugdesc1 p {
+  font: 1rem black;
+  font-family: rubik;
+  margin: 0 3.75rem 1.875rem 0;
+  line-height: 220%;
+}
+
+.sugdesc1 form {
+  margin: 1.25em 0 1.25em 0;
+}
+
+.sugdesc1 form input {
+  height: 2.813rem;
+  font-family: rubik;
+  font-size: 0.938rem;
+  border-radius: 0.5em;
+  transition: 0.1s linear;
+  border: none;
+}
+
+.sugdesc1 form input:first-of-type {
+  width: 16.875rem;
+  color: rgb(128, 224, 221);
+  background-color: rgba(128, 224, 221, 0.15);
+  margin-right: 1.75rem;
+  text-indent: 1rem;
+  outline: none;
+}
+
+.emailSuccess {
+  border: 1.75px solid greenyellow !important;
+}
+
+.emailError {
+  border: 1.75px solid red !important;
+}
+
+.sugdesc1 form input:nth-of-type(2) {
+  width: 9.375rem;
+  background-color: #80e0dd;
+  color: white;
+  cursor: pointer;
+}
+
+.sugdesc1 form input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+*::placeholder {
+  color: rgb(128, 224, 221);
+}
+
+.sugdesc2 {
+  grid-area: sugdesc2;
+  flex-direction: column;
+}
+
+.sugimg2 {
+  grid-area: sugimg2;
+  justify-content: left;
+  align-items: center;
+}
+
+.sugdesc2 p {
+  font: 1rem black;
+  font-family: rubik;
+  margin: 0 3.75rem 2.5rem 0;
+  line-height: 220%;
+}
+
+.sugdesc2 input {
+  width: 9.375rem;
+  height: 2.8125rem;
+  border: none;
+  font-family: rubik;
+  font-size: 0.9375rem;
+  border-radius: 0.5em;
+  background-color: #ef7f65;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.sugdesc2 input:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.sugimg1 img {
+  width: 92%;
+  height: auto;
+}
+
+.sugimg2 img {
+  width: 82.5%;
+  height: auto;
+}

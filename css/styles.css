@@ -1,0 +1,1618 @@
+@font-face {
+  src: url(../fonts/avenir.woff) format("woff");
+  font-family: avenir;
+}
+@font-face {
+  font-family: rubik;
+  src: url(../fonts/rubik.woff) format("woff");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: avenir;
+  color: #15354b;
+  scroll-behavior: smooth;
+  text-justify: auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: ". logo logo logo . . navbar navbar navbar navbar navbar .";
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  background-color: white;
+  border-top: 1.875rem solid white;
+}
+
+.hamburger {
+  grid-area: hamburger;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: avenir;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: rgb(25, 6, 6);
+  padding: 0;
+  width: 8em;
+  height: 3.125em;
+  color: #506270;
+  margin: auto;
+}
+
+.logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  height: 46px;
+  width: 153px;
+  cursor: pointer;
+}
+
+.navigation {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 46px;
+  color: black;
+}
+.navigation li {
+  list-style-type: none;
+}
+.navigation li a {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  color: orange;
+}
+.navigation li a:hover {
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+.startbtn {
+  font-size: 1rem;
+  font-family: avenir;
+  background-color: #ef7f65;
+  border: none;
+  color: white;
+  padding: 0;
+  width: 9.375rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.startbtn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 6.063rem auto 5.625rem auto;
+  grid-template-areas: ". . . . . . . . . . . . " "front front front front front front front front front front front front" ". . . . . . . . . . . ." "group group group group group group group group group group group group";
+}
+
+.hero-front {
+  grid-area: front;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-size: 1864px 277px;
+  background-position-x: center;
+}
+
+.hero-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-message h1 {
+  margin: 5rem 0 0 0;
+  text-align: center;
+  font-size: 3.75rem;
+  font-weight: lighter;
+}
+.hero-message p {
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: rubik;
+  line-height: 200%;
+  padding: 1.25rem;
+  color: #506270;
+  line-height: 2rem;
+}
+
+.front-btn {
+  margin-top: 0.937em;
+  font-size: 1rem;
+  font-family: avenir;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: rgb(25, 6, 6);
+  padding: 0;
+  width: 16.875em;
+  height: 3.125em;
+  color: #506270;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.front-btn:hover {
+  color: white;
+  background-color: #180c18;
+}
+
+.group-img {
+  grid-area: group;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.icon-blocks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 11rem auto;
+  grid-template-areas: ". . . . ." "feature box1 box2 box3 box4";
+}
+
+.feature {
+  grid-area: feature;
+}
+
+.box1 {
+  grid-area: box1;
+}
+
+.box2 {
+  grid-area: box2;
+}
+
+.box3 {
+  grid-area: box3;
+}
+
+.box4 {
+  grid-area: box4;
+}
+
+.feature,
+.box1,
+.box2,
+.box3,
+.box4 {
+  background: #eff8ff;
+  display: flex;
+  flex-direction: column;
+  border-top: 1.625em solid white;
+}
+
+.feature {
+  position: relative;
+}
+.feature img {
+  position: absolute;
+  width: 4.75rem;
+  height: auto;
+  top: -4.5%;
+  right: 10%;
+}
+
+.box1 h2,
+.box2 h2,
+.box3 h2 {
+  font: 1.75rem avenir;
+  font-weight: lighter;
+  margin-top: 2.438em;
+}
+.box1 p,
+.box2 p,
+.box3 p {
+  font: 1rem rubik;
+  text-align: left;
+  text-justify: inter-word;
+  padding: 0 1.25em 0 0;
+  line-height: 180%;
+  font-weight: lighter;
+  margin: 1.875em 0 6.25em 0;
+}
+
+.square {
+  width: 6.26em;
+  height: 6.13em;
+  border-radius: 1.25em;
+  margin-top: 6.688rem;
+  position: relative;
+}
+
+.square-border {
+  position: absolute;
+  width: 6.26em;
+  height: 6.13em;
+  bottom: 10%;
+  left: 10%;
+  border-radius: 1.25em;
+  border: 3px solid #3b5c91;
+}
+
+.sqmid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.red {
+  background-color: #ef7f65;
+}
+
+.green {
+  background-color: #b1ea8c;
+}
+
+.yellow {
+  background-color: #ffe35a;
+}
+
+.blue {
+  background-color: #80e0dd;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.5rem auto 12.5rem auto;
+  grid-template-areas: ". . . . . . . . . . . . " ". . sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugimg1 sugimg1 sugimg1 sugimg1 . ." ". . . . . . . . . . . . " ". . sugimg2 sugimg2 sugimg2 sugimg2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 . .";
+}
+
+.sugdesc1,
+.sugdesc2,
+.sugimg1,
+.sugimg2 {
+  display: flex;
+}
+
+.sugdesc1 {
+  grid-area: sugdesc1;
+  flex-direction: column;
+}
+
+.sugimg1 {
+  grid-area: sugimg1;
+  justify-content: right;
+  align-items: center;
+}
+
+.sugdesc1 h3,
+.sugdesc2 h3 {
+  font: 2.5rem black;
+  font-family: avenir;
+  margin: 6.25rem 0 2.5rem 0;
+}
+
+.sugdesc1 p {
+  font: 1rem black;
+  font-family: rubik;
+  margin: 0 3.75rem 1.875rem 0;
+  line-height: 220%;
+}
+
+.sugdesc1 form {
+  margin: 1.25em 0 1.25em 0;
+}
+
+.sugdesc1 form input {
+  height: 2.813rem;
+  font-family: rubik;
+  font-size: 0.938rem;
+  border-radius: 0.5em;
+  transition: 0.1s linear;
+  border: none;
+}
+
+.sugdesc1 form input:first-of-type {
+  width: 16.875rem;
+  color: rgb(128, 224, 221);
+  background-color: rgba(128, 224, 221, 0.15);
+  margin-right: 1.75rem;
+  text-indent: 1rem;
+  outline: none;
+}
+
+.emailSuccess {
+  border: 1.75px solid greenyellow !important;
+}
+
+.emailError {
+  border: 1.75px solid red !important;
+}
+
+.sugdesc1 form input:nth-of-type(2) {
+  width: 9.375rem;
+  background-color: #80e0dd;
+  color: white;
+  cursor: pointer;
+}
+
+.sugdesc1 form input[type=submit]:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+*::placeholder {
+  color: rgb(128, 224, 221);
+}
+
+.sugdesc2 {
+  grid-area: sugdesc2;
+  flex-direction: column;
+}
+
+.sugimg2 {
+  grid-area: sugimg2;
+  justify-content: left;
+  align-items: center;
+}
+
+.sugdesc2 p {
+  font: 1rem black;
+  font-family: rubik;
+  margin: 0 3.75rem 2.5rem 0;
+  line-height: 220%;
+}
+
+.sugdesc2 input {
+  width: 9.375rem;
+  height: 2.8125rem;
+  border: none;
+  font-family: rubik;
+  font-size: 0.9375rem;
+  border-radius: 0.5em;
+  background-color: #ef7f65;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.sugdesc2 input:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.sugimg1 img {
+  width: 92%;
+  height: auto;
+}
+
+.sugimg2 img {
+  width: 82.5%;
+  height: auto;
+}
+
+.pricing-plan {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.5rem auto 5rem auto 6.25rem;
+  grid-template-areas: ". . . . . . . . . . . . " ". . . pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc . . ." ". . . . . . . . . . . . " ". . pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable . ." ". . . . . . . . . . . . ";
+}
+
+.pricingdesc {
+  grid-area: pricingdesc;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pricingdesc h4 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75em;
+  font-weight: lighter;
+}
+.pricingdesc p {
+  font: 1rem black;
+  font-family: rubik;
+  padding: 0 9%;
+  line-height: 220%;
+}
+
+.pricingtable {
+  grid-area: pricingtable;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pricing {
+  width: 33.1875rem;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  margin-left: 4%;
+}
+
+.pricing:first-of-type {
+  margin-right: 4%;
+  margin-left: 0;
+}
+
+.pricingsash {
+  position: absolute;
+  left: 80%;
+}
+
+.pricingimg {
+  margin: 5rem 0 0 11.5%;
+}
+
+.pricingvalue {
+  display: flex;
+  margin: 2.25rem 0 0 11.5%;
+  flex-direction: row;
+}
+.pricingvalue h4 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+.pricingvalue p {
+  margin: 0;
+  padding-top: 15px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+hr {
+  margin: 2.55rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h4 sup {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.pricinginfo {
+  margin: 0 11.5% 0 11.5%;
+}
+
+.pricinginfo p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5em;
+}
+
+.pricingbtns {
+  display: flex;
+  height: 11.563rem;
+  margin: 0 11.5%;
+  flex-direction: row;
+  align-items: center;
+}
+.pricingbtns .bluefont {
+  color: #80e0dd;
+}
+.pricingbtns .redfont {
+  color: #ef7f65;
+}
+
+.pricebutton {
+  margin: auto 5% auto 0;
+  width: 11.25rem;
+  height: 2.813rem;
+  color: white;
+  border: none;
+  border-radius: 1.75rem;
+  font-size: 1rem;
+  font-family: avenir;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.pricebutton:hover {
+  background-color: white;
+  color: black;
+  border: 2px black solid;
+}
+
+.appdownload {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 6.25rem auto;
+  grid-template-areas: ". . . . . . . . . . . . " "appbackground appbackground appbackground appbackground appbackground appbackground appbackground appbackground appimage appimage appimage appimage";
+  position: relative;
+}
+
+.appbackground {
+  grid-area: appbackground;
+  background: #eff8ff;
+  border-bottom: 5.8125rem solid white;
+  border-top: 5.8125rem solid white;
+  display: flex;
+  position: relative;
+}
+
+.appdesc {
+  display: flex;
+  flex-direction: column;
+}
+.appdesc h5 {
+  font-size: 3.75rem;
+  font-weight: lighter;
+  margin: 8.125rem 0 3.4375rem 25%;
+  padding-right: 5%;
+}
+.appdesc p {
+  font-size: 1rem;
+  font-family: rubik;
+  margin: 0 0 4.375rem 25%;
+  padding-right: 25%;
+  line-height: 200%;
+}
+.appdesc .appbuttons {
+  display: flex;
+  margin: 0 0 0 25%;
+}
+.appdesc .appbuttons p {
+  font-size: 1.75rem;
+  padding: 0;
+  margin: 0 4.94rem 8.125rem 0;
+}
+.appdesc .appbuttons a {
+  margin-right: 1.875rem;
+  height: 2.5rem;
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out;
+}
+.appdesc .appbuttons a img {
+  width: 8.4375rem;
+  height: 100%;
+}
+.appdesc .appbuttons a:hover {
+  filter: grayscale(0);
+}
+
+.appimage {
+  grid-area: appimage;
+  background: #eff8ff;
+  border-bottom: 5.8125rem solid white;
+  border-top: 5.8125rem solid white;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.appimage img {
+  position: absolute;
+  top: -9%;
+  width: 27rem;
+  height: auto;
+}
+
+.newsletter {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.5rem auto 2px;
+  grid-template-areas: ". . . . . . . . . . . . " ". . newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterbutton newsletterbutton . ." ". . hr hr hr hr hr hr hr hr . .";
+}
+
+.newsletterdesc {
+  grid-area: newsletterdesc;
+  display: flex;
+  flex-direction: column;
+}
+.newsletterdesc h4 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  padding-right: 7rem;
+}
+.newsletterdesc p {
+  font-size: 1rem;
+  margin: 2.5rem 0 3.125rem 0;
+  font-family: rubik;
+  line-height: 200%;
+  padding-right: 7rem;
+}
+
+.newsletterbutton {
+  grid-area: newsletterbutton;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.newsletterbutton button {
+  width: 16.875rem;
+  height: 3.75rem;
+  border-radius: 3.125em;
+  border: none;
+  background-color: #80e0dd;
+  color: white;
+  font-size: 1.25rem;
+  font-family: rubik;
+  letter-spacing: 0.1875rem;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.newsletterbutton button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.newsletterhr {
+  grid-area: hr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 27.125rem 2.875rem;
+  grid-template-areas: "footer footer footer footer footer footer footer footer footer footer footer footer" ". . . . . . . . . . . . ";
+}
+
+.footerbg {
+  grid-area: footer;
+  background-image: url(../img/icon2.png);
+  background-repeat: no-repeat;
+  background-size: 1970px 434px;
+  background-position-x: center;
+}
+
+.footerlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 7.5rem;
+}
+.footerlist img {
+  height: 2.875rem;
+  width: 9.688rem;
+  margin: 0 0 0 16.66%;
+}
+
+.ul1,
+.ul2,
+.ul3 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.limain {
+  font-size: 1.25rem;
+}
+
+.ul1 li,
+.ul2 li {
+  margin-bottom: 1.5625rem;
+}
+
+.ul1 li a,
+.ul2 li a {
+  font-size: 1rem;
+  font-family: rubik;
+  text-decoration: none;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  color: orange;
+}
+.ul1 li a:hover,
+.ul2 li a:hover {
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+.ul3 {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.ul3 li a {
+  transition: 0.3s ease;
+  filter: grayscale(100%);
+}
+.ul3 li a:hover {
+  filter: grayscale(0);
+}
+.ul3 img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 2.875rem 0 0;
+}
+
+.ul1 {
+  width: 9rem;
+}
+
+.ul2 {
+  width: 8rem;
+}
+
+.ul3 {
+  margin-right: 16.66%;
+}
+
+.footerp {
+  margin: 0 0 2.875rem 16.66%;
+  font-size: 1rem;
+  font-family: rubik;
+}
+
+#footerfbimg {
+  width: 0.5625rem;
+}
+
+.active {
+  opacity: 1;
+  transition: 0.2s linear;
+}
+
+.bolder {
+  font-weight: bolder;
+  transition: 0.2s linear;
+}
+
+.redact {
+  box-shadow: 0px 9px 43px -5px #ef7f65;
+}
+
+.blueact {
+  box-shadow: 0px 9px 43px -5px #80e0dd;
+}
+
+.unactive {
+  transition: 0.2s linear;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+.modal h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.modal form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modal form input {
+  height: 3rem;
+  font-family: rubik;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  transition: 0.1s linear;
+  border: 1px solid black;
+}
+
+.modal input:first-of-type {
+  width: 17rem;
+  color: orange;
+  background-color: white;
+  text-indent: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal input:first-of-type::placeholder {
+  color: black;
+}
+
+.modal form input:nth-of-type(2) {
+  width: 17rem;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.modal form input[type=submit]:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: ". logo logo logo . navbar navbar navbar navbar navbar navbar .";
+  }
+  .navigation {
+    padding: 0;
+  }
+  .hero-message h1 {
+    margin: 4rem 0 0 0;
+  }
+  .group-img img {
+    width: 70%;
+  }
+  .square-border img {
+    width: 30%;
+  }
+  img {
+    top: -4%;
+  }
+  .sugdesc1 form {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .suggestions {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 12.5rem auto 12.5rem auto;
+    grid-template-areas: ". . . . . . . . . . . . " ". sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugimg1 sugimg1 sugimg1 sugimg1 sugimg1 ." ". . . . . . . . . . . . " ". sugimg2 sugimg2 sugimg2 sugimg2 sugimg2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 .";
+  }
+  .pricing-plan {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10rem auto 4rem auto;
+    grid-template-areas: ". . . . . . . . . . . . " ". . pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc . ." ". . . . . . . . . . . . " ". . pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable . .";
+  }
+  .pricingdesc p {
+    padding: 0;
+  }
+  .pricebutton {
+    width: 9rem;
+  }
+  .pricingsash {
+    top: 0%;
+    width: 12%;
+  }
+  .appdesc .appbuttons p {
+    margin: 0 2rem 4rem 0;
+  }
+  .appdesc h5 {
+    margin: 6rem 0 3.4375rem 15%;
+    padding-right: 5%;
+  }
+  .appdesc p {
+    margin: 0 0 4.375rem 15%;
+  }
+  .appdesc .appbuttons {
+    margin: 0 0 0 15%;
+  }
+  .appdesc .appbuttons p {
+    margin: 0 2rem 4rem 0;
+  }
+  .appdesc .appbuttons a {
+    margin-right: 1rem;
+  }
+  .appdesc .appbuttons a img {
+    width: 8.4375rem;
+    height: 2.5rem;
+  }
+  .appimage {
+    width: 100%;
+    height: 100%;
+  }
+  .appimage img {
+    top: -10%;
+    width: 25rem;
+    height: auto;
+  }
+  .modal {
+    width: 40% !important;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: ". logo logo logo . navbar navbar navbar navbar navbar navbar .";
+  }
+  .navigation {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .hero-message h1 {
+    margin: 3rem 0 0 0;
+  }
+  .group-img img {
+    width: 80%;
+  }
+  .square-border img {
+    width: 30%;
+  }
+  .feature img {
+    top: -4%;
+  }
+  .box1 h2,
+.box2 h2,
+.box3 h2 {
+    padding: 0 1em 0 0;
+  }
+  .suggestions {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: ". sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugimg1 sugimg1 sugimg1 sugimg1 sugimg1 ." ". sugimg2 sugimg2 sugimg2 sugimg2 sugimg2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 .";
+  }
+  .pricing-plan {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10rem auto 4rem auto;
+    grid-template-areas: ". . . . . . . . . . . . " ". . pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc . ." ". . . . . . . . . . . . " ". pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable .";
+  }
+  .pricingdesc p {
+    padding: 0;
+  }
+  .pricebutton {
+    width: 8rem;
+  }
+  .pricingsash {
+    top: 0%;
+    width: 12%;
+  }
+  .pricingbtns {
+    height: 8rem;
+  }
+  .sugdesc1 form {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .appdesc h5 {
+    margin: 5rem 0 3.4375rem 10%;
+    padding-right: 5%;
+  }
+  .appdesc p {
+    margin: 0 0 4.375rem 10%;
+  }
+  .appdesc .appbuttons {
+    margin: 0 0 0 10%;
+  }
+  .appdesc .appbuttons p {
+    margin: 0 1.5rem 3rem 0;
+  }
+  .appdesc .appbuttons a {
+    margin-right: 1rem;
+  }
+  .appdesc .appbuttons a img {
+    width: 8.4375rem;
+    height: 2.5rem;
+  }
+  .appimage {
+    width: 100%;
+    height: 100%;
+  }
+  .appimage img {
+    top: -1%;
+    width: 20rem;
+    height: auto;
+  }
+  .newsletter {
+    grid-template-rows: auto 2px;
+    grid-template-areas: ". newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterbutton newsletterbutton newsletterbutton ." ". hr hr hr hr hr hr hr hr hr hr .";
+  }
+  #logo2 {
+    margin: 0 0 0 8%;
+  }
+  .ul3 {
+    margin-right: 8%;
+  }
+  .modal {
+    width: 50% !important;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "logo logo navbar navbar navbar navbar";
+  }
+  .navigation {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .hero-message h1 {
+    margin: 2rem 0 0 0;
+  }
+  .group-img img {
+    width: 80%;
+  }
+  /*SEKCJA 2*/
+  .icon-blocks {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 11rem auto;
+    grid-template-areas: ". . . . . . . ." "feature box1 box1 box2 box2 box3 box3 box4";
+  }
+  .square-border img {
+    width: 30%;
+  }
+  .feature img {
+    display: none;
+  }
+  .box1 h2,
+.box2 h2,
+.box3 h2 {
+    padding: 0 1em 0 0;
+  }
+  .suggestions {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: ". sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugdesc1 sugimg1 sugimg1 sugimg1 sugimg1 sugimg1 ." ". sugimg2 sugimg2 sugimg2 sugimg2 sugimg2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 sugdesc2 .";
+  }
+  .pricing-plan {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7rem auto 3rem auto;
+    grid-template-areas: ". . . . . . . . . . . . " ". . pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc . ." ". . . . . . . . . . . . " ". pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable .";
+  }
+  .pricingdesc p {
+    padding: 0;
+  }
+  .pricebutton {
+    width: 7rem;
+  }
+  .pricingsash {
+    top: 0%;
+    width: 12%;
+  }
+  .pricingbtns {
+    height: 7rem;
+  }
+  .sugdesc1 form {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .appdownload {
+    grid-template-areas: ". . . . . . . . . . . . " "appbackground appbackground appbackground appbackground appbackground appbackground appimage appimage  appimage appimage appimage appimage";
+  }
+  .appdesc h5 {
+    margin: 5rem 0 3.4375rem 10%;
+    padding-right: 0;
+  }
+  .appdesc p {
+    margin: 0 0 4.375rem 10%;
+    padding-right: 5%;
+  }
+  .appdesc .appbuttons {
+    margin: 0 0 0 10%;
+    display: inline-block;
+  }
+  .appdesc .appbuttons p {
+    margin: 0 0 1rem 0;
+  }
+  .appdesc .appbuttons a {
+    display: inline-block;
+    margin: 0 1rem 2rem 0;
+  }
+  .appdesc .appbuttons a img {
+    width: 8.4375rem;
+    height: 2.5rem;
+  }
+  .appimage {
+    width: 100%;
+    height: 100%;
+  }
+  .appimage img {
+    top: 0%;
+    width: 21rem;
+    height: auto;
+  }
+  .newsletter {
+    grid-template-rows: auto 2px;
+    grid-template-areas: ". newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterdesc newsletterbutton newsletterbutton newsletterbutton ." ". hr hr hr hr hr hr hr hr hr hr .";
+  }
+  .ul3 {
+    flex-direction: column;
+  }
+  .ul3 img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0 2rem 0;
+  }
+  #logo2 {
+    margin: 0 0 0 8%;
+  }
+  .ul3 {
+    margin-right: 8%;
+  }
+  .modal {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7rem auto;
+    grid-template-areas: "logo hamburger" "navbar navbar";
+    border-top: 0;
+  }
+  .navigation {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    height: 15rem;
+  }
+  .navigation li {
+    margin: 0.5rem 0;
+  }
+  .navigation li a {
+    font-size: 1.5rem;
+  }
+  .navigation li a:hover {
+    font-size: 1.6rem;
+  }
+  .navigation.show {
+    display: flex;
+    transition: 0.2s linear;
+  }
+  .navigation.show:hover {
+    transition: all 1s ease 0s;
+  }
+  .hamburger {
+    display: flex;
+    font-size: 1.5rem;
+  }
+  .hero {
+    grid-template-rows: 10rem auto 5rem auto;
+  }
+  .hero-message h1 {
+    margin: 1rem 0 0 0;
+  }
+  .hero-message p {
+    font-size: 1.5rem;
+  }
+  .front-btn {
+    font-size: 1.5rem;
+  }
+  .hero-message h1 {
+    padding: 0 2rem;
+    font-size: 3.5rem;
+  }
+  .hero-message p {
+    padding: 2rem;
+  }
+  .group-img {
+    padding: 0 2rem;
+    margin-left: 0;
+  }
+  .group-img img {
+    width: 100%;
+  }
+  .square.green,
+.square.yellow {
+    margin-top: 2rem;
+  }
+  .square-border img {
+    width: 30%;
+  }
+  .feature img {
+    display: none;
+  }
+  .icon-blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem auto auto auto;
+    grid-template-areas: "." "box1" "box2" "box3";
+  }
+  .box1,
+.box2,
+.box3 {
+    border-top: none;
+    align-items: center;
+  }
+  .box1 h2,
+.box2 h2,
+.box3 h2 {
+    font: 3rem avenir;
+    font-weight: lighter;
+    margin-top: 1em;
+    padding: 0 1rem;
+  }
+  .box1 p,
+.box2 p,
+.box3 p {
+    font: 1.5rem rubik;
+    text-align: left;
+    text-justify: inter-word;
+    padding: 0 3rem;
+    line-height: 2rem;
+    font-weight: lighter;
+    margin: 1em 0 3em 0;
+    text-align: center;
+  }
+  .suggestions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 5rem auto auto;
+    grid-template-areas: " sugimg1 " "sugdesc1 " "." "sugimg2" "." "sugdesc2";
+  }
+  .sugdesc1 form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  .sugdesc1 form input:first-of-type {
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+    margin-right: 5%;
+  }
+  .sugdesc2 input {
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+    margin: 1.25rem 0;
+  }
+  .sugdesc1 form input:nth-of-type(2) {
+    height: 5rem;
+    background-color: #80e0dd;
+    color: white;
+    font-size: 2rem;
+  }
+  .sugdesc1,
+.sugdesc2 {
+    align-items: center;
+  }
+  .sugdesc1 h3,
+.sugdesc2 h3 {
+    margin: 0.2em 0 0.5em;
+    font-size: 3.5rem;
+  }
+  .sugdesc1 p,
+.sugdesc2 p {
+    margin: 1em 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0 3rem;
+    text-align: center;
+  }
+  .sugimg1,
+.sugimg2 {
+    justify-content: center;
+    width: 80%;
+  }
+  .sugimg1 {
+    margin: 3em auto 3em auto;
+  }
+  .sugimg2 {
+    margin: 0 auto 3rem;
+  }
+  .pricing-plan {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem auto 2rem auto 5rem;
+    grid-template-areas: "." "pricingdesc" "." "pricingtable" ".";
+  }
+  .pricingtable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricingdesc h4 {
+    font-size: 3.5rem;
+    margin: 1.5rem auto;
+  }
+  .pricingdesc p {
+    margin: 1rem 0;
+    padding: 0 2.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+  .pricingsash {
+    top: 0%;
+    width: 12%;
+  }
+  .pricingbtns {
+    flex-direction: column;
+    height: 10rem;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0 2rem;
+  }
+  .pricingbtns button {
+    width: 20rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin: 0;
+    border-radius: 2rem;
+  }
+  .pricingbtns p {
+    font-size: 1.5rem;
+  }
+  .pricing {
+    margin: 0;
+    width: 80%;
+  }
+  .pricing:first-of-type {
+    margin: 0 0 5rem 0;
+  }
+  .pricingimg img {
+    width: 50%;
+  }
+  .pricinginfo {
+    margin: 0;
+    padding: 0 2rem;
+  }
+  .pricinginfo p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .pricingvalue {
+    margin: 2.25rem 11.5% 0 11.5%;
+    justify-content: center;
+  }
+  .pricingvalue h4 {
+    font-size: 4rem;
+  }
+  .pricingvalue h4 sup {
+    font-size: 2rem;
+  }
+  .pricingvalue p {
+    font-size: 2rem;
+  }
+  .pricingvalue hr {
+    margin: 2rem 0;
+  }
+  .appdownload {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50rem;
+    grid-template-areas: "appbackground" "appimage";
+  }
+  .appdesc h5 {
+    margin: 5rem 0 0 0;
+    padding: 0 2.5rem;
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 4rem;
+  }
+  .appdesc p {
+    margin: 3rem 0 0 0;
+    padding: 0 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+  .appdesc .appbuttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+  }
+  .appdesc .appbuttons p {
+    justify-self: center;
+    margin: 0;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 3rem 0;
+  }
+  .appdesc .appbuttons a {
+    width: 40%;
+    max-width: 16rem;
+    margin: 0;
+    height: 5rem;
+    margin-right: 3%;
+  }
+  .appdesc .appbuttons a img {
+    display: block;
+    margin-right: 10%;
+    width: 100%;
+    height: 100%;
+  }
+  .appdesc .appbuttons a:nth-of-type(2) {
+    margin-right: 0;
+    margin-left: 3%;
+  }
+  .appbackground,
+.appimage {
+    border-top: none;
+    border-bottom: none;
+  }
+  .appimage {
+    grid-area: appimage;
+    width: 100%;
+  }
+  .appimage img {
+    position: absolute;
+    height: auto;
+    width: 25rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+  }
+  .newsletterdesc h4 {
+    margin: 4.5rem 0 0 0;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  .newsletterdesc p {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin: 2rem 0 2.55rem;
+    padding: 0 2.5rem;
+    text-align: center;
+  }
+  .newsletterbutton {
+    justify-content: center;
+  }
+  .newsletterbutton button {
+    font-size: 2rem;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "footer";
+  }
+  .footerlist {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2.5rem auto 2.5rem auto 2.5rem auto;
+    grid-template-areas: "logo2" "." "ul1" "." "ul2" "." "ul3";
+    margin: 0;
+  }
+  .ul1 {
+    grid-area: ul1;
+  }
+  .ul2 {
+    grid-area: ul2;
+  }
+  .ul1,
+.ul2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .ul1 li a,
+.ul2 li a {
+    font-size: 2rem;
+  }
+  .ul3 {
+    grid-area: ul3;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0 10%;
+  }
+  .ul3 img {
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
+  }
+  .limain {
+    font-size: 3rem;
+  }
+  #footerfbimg {
+    width: 1rem;
+  }
+  #logo2 {
+    margin: auto;
+    width: 20rem;
+    height: auto;
+  }
+  .footerp {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2.875rem;
+    font-size: 1.5rem;
+  }
+  .modal {
+    width: 80%;
+    height: auto;
+  }
+  .modal h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .modal form input {
+    height: 4rem;
+    font-family: rubik;
+    font-size: 1.5rem;
+    border-radius: 0.5em;
+    transition: 0.1s linear;
+    border: 1px solid black;
+  }
+  .modal input:first-of-type {
+    margin-bottom: 1.5rem;
+  }
+  .close-modal {
+    font-size: 4rem;
+    top: 0.8rem;
+    right: 1.5rem;
+  }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>FIND YOU</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img id="logo" src="./img/logo.png" alt="logo" />
+      </div>
+      <button class="hamburger" id="hamburger">Menu</button>
+      <ul class="navigation" id="navigation">
+        <li>
+          <a href="#feature">Feature</a>
+        </li>
+        <li>
+          <a href="#howitwork">How it Work</a>
+        </li>
+        <li>
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li>
+          <a href="#getstarted"><button class="startbtn">Get Start</button></a>
+        </li>
+      </ul>
+    </header>
+
+    <section class="hero">
+      <div class="hero-front">
+        <div class="hero-message">
+          <h1>Be together, whenever.</h1>
+          <p>
+            I must explain to you how all this mistaken idea of denouncing
+            pleasure and praising <br />
+            pain was born and I will give you a complete account.
+          </p>
+          <a href="#"><button class="front-btn">Try 30 Days Free</button></a>
+        </div>
+      </div>
+
+      <div class="group-img">
+        <img src="./img/group.png" alt="grupa ludzi" />
+      </div>
+    </section>
+
+    <section class="icon-blocks" id="feature">
+      <div class="feature">
+        <img src="./img/feature1.png" alt="bandana" />
+      </div>
+
+      <div class="box1">
+        <div class="square red">
+          <div class="square-border">
+            <img class="sqmid" src="./img/middle.png" alt="kwadrat" />
+          </div>
+        </div>
+
+        <h2>Message System</h2>
+        <p>
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born a complete account.
+        </p>
+      </div>
+
+      <div class="box2">
+        <div class="square green">
+          <div class="square-border">
+            <img class="sqmid" src="./img/middle.png" alt="kwadrat" />
+          </div>
+        </div>
+
+        <h2>Voice Call</h2>
+        <p>
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born a complete account.
+        </p>
+      </div>
+
+      <div class="box3">
+        <div class="square yellow">
+          <div class="square-border">
+            <img class="sqmid" src="./img/middle.png" alt="kwadrat" />
+          </div>
+        </div>
+
+        <h2>File Share</h2>
+        <p>
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born a complete account.
+        </p>
+      </div>
+
+      <div class="box4"></div>
+    </section>
+
+    <section class="suggestions" id="howitwork">
+      <div class="sugdesc1">
+        <h3>Create Account</h3>
+        <p>
+          We all need to start well must explain to you how all this mistaken
+          idea of denouncing pleasure and praising pain was born and I will give
+          you a complete account of the system, and expound.
+        </p>
+        <form id="sugform" name="emailForm" onsubmit="return validateForm()">
+          <input
+            id="emailField"
+            class="emailValid"
+            type="email"
+            minlength="6"
+            placeholder="Email Address"
+            required
+          />
+          <input id="submitsug" type="submit" value="submit" />
+        </form>
+      </div>
+
+      <div class="sugimg1">
+        <img src="./img/sugimg1.png" alt="singupimg" />
+      </div>
+
+      <div class="sugdesc2">
+        <h3>Invite Friend</h3>
+        <p>
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system, and expound the actual teachings.
+        </p>
+        <input type="button" name="sec3btn" value="Get Started" />
+      </div>
+
+      <div class="sugimg2">
+        <img src="./img/sugimg2.png" alt="invitefriendimg" />
+      </div>
+    </section>
+
+    <section class="pricing-plan" id="pricing">
+      <div class="pricingdesc">
+        <h4>Pricing Plan</h4>
+        <p>
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system.
+        </p>
+      </div>
+
+      <div class="pricingtable">
+        <div class="pricing">
+          <img class="pricingsash" src="./img/personal.png" alt="personal" />
+          <div class="pricingimg">
+            <img src="./img/persimg.png" alt="motor" />
+          </div>
+          <div class="pricingvalue">
+            <h4><sup>$</sup>18.35</h4>
+            <p>/month</p>
+          </div>
+          <hr />
+          <div class="pricinginfo">
+            <p>30gb data storage</p>
+            <p>More than 500+ friend include</p>
+            <p>Group chat available</p>
+            <p>Categories based friend list</p>
+          </div>
+          <div class="pricingbtns">
+            <button class="pricebutton blue">Sign Up!</button>
+            <p class="pricingtry bluefont">Try 30 Days Free</p>
+          </div>
+        </div>
+
+        <div class="pricing">
+          <img class="pricingsash" src="./img/business.png" alt="business" />
+          <div class="pricingimg">
+            <img src="./img/busimg.png" alt="motor2" />
+          </div>
+          <div class="pricingvalue">
+            <h4><sup>$</sup>72.90</h4>
+            <p>/month</p>
+          </div>
+          <hr />
+          <div class="pricinginfo">
+            <p>80gb data storage</p>
+            <p>More than 1500+ friend include</p>
+            <p>Group chat available</p>
+            <p>Categories based friend list</p>
+          </div>
+          <div class="pricingbtns">
+            <button class="pricebutton red">Sign Up!</button>
+            <p class="pricingtry redfont">Try 30 Days Free</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="appdownload" id="getstarted">
+      <div class="appbackground">
+        <div class="appdesc">
+          <h5>
+            You can easily <br />
+            record video call
+          </h5>
+          <p>
+            But I must explain to you how all this mistaken idea of denouncing
+            pleasure and praising pain was born and I will give you a complete
+            account of the system, and expound the actual teachings of the great
+            explorer of the truth.
+          </p>
+          <div class="appbuttons">
+            <p>Download App Now?</p>
+            <a href="https://play.google.com/"
+              ><img src="./img/googleplay.png" alt="google"
+            /></a>
+            <a href="https://www.apple.com/pl/app-store/"
+              ><img src="./img/appstore.png" alt="apple"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="appimage">
+        <img src="./img/Screen.png" alt="telefon" />
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletterdesc">
+        <h4>Subscribe Newsletter for Keep Updated</h4>
+        <p>
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I complete account of the
+          system, and expound the actual teachings.
+        </p>
+      </div>
+
+      <div class="newsletterbutton">
+        <button>Subscribe</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Enter your email:</h1>
+        <form name="newsletterForm">
+          <input
+            id="newsletterField"
+            class="newsletterValid"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            minlength="6"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          />
+          <input id="submitnewsletter" type="submit" name="Submit" />
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+
+      <div class="newsletterhr">
+        <hr />
+      </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <footer class="footer">
+      <div class="footerbg">
+        <div class="footerlist">
+          <img id="logo2" src="./img/logo.png" alt="logo" />
+
+          <ul class="ul1">
+            <li class="limain">Quick Link</li>
+            <li>
+              <a href="">Feature</a>
+            </li>
+            <li>
+              <a href="">Terms & Condition</a>
+            </li>
+            <li>
+              <a href="">User Feedback</a>
+            </li>
+            <li>
+              <a href="">Online Payment</a>
+            </li>
+          </ul>
+
+          <ul class="ul2">
+            <li class="limain">How it Work?</li>
+            <li>
+              <a href="">Create Account</a>
+            </li>
+            <li>
+              <a href="">Make Plan</a>
+            </li>
+            <li>
+              <a href="">Select Date</a>
+            </li>
+            <li>
+              <a href="">Online Payment</a>
+            </li>
+          </ul>
+
+          <ul class="ul3">
+            <li>
+              <a href=""><img id="footerfbimg" src="./img/fb.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/tt.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/ig.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/li.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="footerhr" />
+
+        <p class="footerp">© Copyright Secure. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/pricingplandom.js"></script>
+    <script src="./js/logopagereload.js"></script>
+    <script src="./js/subscribemodal.js"></script>
+    <script src="./js/descpanel.js"></script>
+  </body>
+</html>

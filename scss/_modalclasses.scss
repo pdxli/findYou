@@ -1,0 +1,89 @@
+/// KLASY FUNKCJONALNE DO MODALA
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+/////////////////////////////////////////////////////////////
+
+.modal {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    input {
+      height: 3rem;
+      font-family: rubik;
+      font-size: 1rem;
+      border-radius: 0.5em;
+      transition: 0.1s linear;
+      border: 1px solid black;
+    }
+  }
+}
+
+.modal input:first-of-type {
+  width: 17rem;
+  color: orange;
+  background-color: white;
+  text-indent: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal input:first-of-type::placeholder {
+  color: black;
+}
+
+.modal form input:nth-of-type(2) {
+  width: 17rem;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.modal form input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}

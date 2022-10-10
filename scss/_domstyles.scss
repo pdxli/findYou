@@ -1,0 +1,23 @@
+.active {
+  opacity: 1;
+  transition: 0.2s linear;
+}
+
+.bolder {
+  font-weight: bolder;
+  transition: 0.2s linear;
+}
+
+.redact {
+  box-shadow: 0px 9px 43px -5px #ef7f65;
+}
+
+.blueact {
+  box-shadow: 0px 9px 43px -5px #80e0dd;
+}
+
+.unactive {
+  transition: 0.2s linear;
+  box-shadow: none;
+  opacity: 0.5;
+}

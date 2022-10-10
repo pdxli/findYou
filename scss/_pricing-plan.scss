@@ -1,0 +1,138 @@
+.pricing-plan {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.5rem auto 5rem auto 6.25rem;
+  grid-template-areas:
+    ". . . . . . . . . . . . "
+    ". . . pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc pricingdesc . . ."
+    ". . . . . . . . . . . . "
+    ". . pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable pricingtable . ."
+    ". . . . . . . . . . . . ";
+}
+
+.pricingdesc {
+  grid-area: pricingdesc;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75em;
+    font-weight: lighter;
+  }
+
+  p {
+    font: 1rem black;
+    font-family: rubik;
+    padding: 0 9%;
+    line-height: 220%;
+  }
+}
+
+.pricingtable {
+  grid-area: pricingtable;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pricing {
+  width: 33.1875rem;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  margin-left: 4%;
+}
+
+.pricing:first-of-type {
+  margin-right: 4%;
+  margin-left: 0;
+}
+
+.pricingsash {
+  position: absolute;
+  left: 80%;
+}
+
+.pricingimg {
+  margin: 5rem 0 0 11.5%;
+}
+
+.pricingvalue {
+  display: flex;
+  margin: 2.25rem 0 0 11.5%;
+  flex-direction: row;
+
+  h4 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: lighter;
+  }
+
+  p {
+    margin: 0;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+}
+
+hr {
+  margin: 2.55rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h4 sup {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.pricinginfo {
+  margin: 0 11.5% 0 11.5%;
+}
+
+.pricinginfo p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5em;
+}
+
+.pricingbtns {
+  display: flex;
+  height: 11.563rem;
+  margin: 0 11.5%;
+  flex-direction: row;
+  align-items: center;
+
+  .bluefont {
+    color: #80e0dd;
+  }
+
+  .redfont {
+    color: #ef7f65;
+  }
+}
+
+.pricebutton {
+  margin: auto 5% auto 0;
+  width: 11.25rem;
+  height: 2.813rem;
+  color: white;
+  border: none;
+  border-radius: 1.75rem;
+  font-size: 1rem;
+  font-family: avenir;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.pricebutton:hover {
+  background-color: white;
+  color: black;
+  border: 2px black solid;
+}

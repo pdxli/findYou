@@ -1,0 +1,79 @@
+.appdownload {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 6.25rem auto;
+  grid-template-areas:
+    ". . . . . . . . . . . . "
+    "appbackground appbackground appbackground appbackground appbackground appbackground appbackground appbackground appimage appimage appimage appimage";
+  position: relative;
+}
+
+.appbackground {
+  grid-area: appbackground;
+  background: #eff8ff;
+  border-bottom: 5.8125rem solid white;
+  border-top: 5.8125rem solid white;
+  display: flex;
+  position: relative;
+}
+
+.appdesc {
+  display: flex;
+  flex-direction: column;
+
+  h5 {
+    font-size: 3.75rem;
+    font-weight: lighter;
+    margin: 8.125rem 0 3.4375rem 25%;
+    padding-right: 5%;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: rubik;
+    margin: 0 0 4.375rem 25%;
+    padding-right: 25%;
+    line-height: 200%;
+  }
+
+  .appbuttons {
+    display: flex;
+    margin: 0 0 0 25%;
+    p {
+      font-size: 1.75rem;
+      padding: 0;
+      margin: 0 4.94rem 8.125rem 0;
+    }
+
+    a {
+      margin-right: 1.875rem;
+      height: 2.5rem;
+      filter: grayscale(100%);
+      transition: 0.3s ease-in-out;
+      img {
+        width: 8.4375rem;
+        height: 100%;
+      }
+    }
+    a:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.appimage {
+  grid-area: appimage;
+  background: #eff8ff;
+  border-bottom: 5.8125rem solid white;
+  border-top: 5.8125rem solid white;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    position: absolute;
+    top: -9%;
+    width: 27rem;
+    height: auto;
+  }
+}
